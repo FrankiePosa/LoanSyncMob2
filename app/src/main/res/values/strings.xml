@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoanSyncMob2</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="loginhere">Already have an account? Login</string>
+    <string name="fullname">Fullname</string>
+    <string name="contact">Contact</string>
+    <string name="signuphere">Don\'t have an account? Sign up</string>
+</resources>
