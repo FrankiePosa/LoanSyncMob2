@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
                             data[0] = "email";
                             data[1] = "password";
 
-                            PutData putData = new PutData("http://192.168.254.110/LoginRegister/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.254.111/LoginRegister/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     //End ProgressBar (Set visibility to GONE)
@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
                                     String result = putData.getResult();
                                     if(result.equals("Login Success")){
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                                         startActivity(intent);
                                         finish();
                                     }

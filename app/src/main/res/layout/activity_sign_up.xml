@@ -20,6 +20,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:fontFamily="@font/poppinsbold"
             android:gravity="center"
             android:text="@string/signup"
@@ -151,7 +152,8 @@
 
         <Button
             android:id="@+id/buttonSignUp"
-            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -171,6 +173,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
             tools:targetApi="jelly_bean" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="225dp"
+            android:layout_height="114dp"
+            app:srcCompat="@drawable/logo"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="-15dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
