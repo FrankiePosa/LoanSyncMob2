@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".SignUp">
 
-    <!-- Last Name -->
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4">
@@ -20,12 +20,12 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="130dp"
             android:fontFamily="@font/poppinsbold"
             android:gravity="center"
             android:text="@string/signup"
             android:textColor="@color/colorAccent"
-            android:textSize="30sp"
+            android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +42,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:hint="@string/firstname"
+            app:endIconMode="clear_text"
+            app:boxBackgroundColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -52,7 +54,9 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_name"
                 android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                android:importantForAutofill="no"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Lastname -->
@@ -64,6 +68,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:hint="@string/lastname"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFirstname">
@@ -74,7 +79,9 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_name"
                 android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                android:importantForAutofill="no"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Email -->
@@ -86,6 +93,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:hint="@string/email"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastname">
@@ -96,7 +104,9 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_user"
                 android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                android:importantForAutofill="no"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password -->
@@ -108,6 +118,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:hint="@string/password"
+            app:endIconMode="clear_text"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
             tools:layout_editor_absoluteX="0dp">
 
@@ -117,7 +128,9 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_pass"
                 android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                tools:targetApi="jelly_bean"
+                android:importantForAutofill="no"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Contact -->
@@ -130,6 +143,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            app:endIconMode="clear_text"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -138,7 +152,9 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/contact"
                 android:fontFamily="@font/poppinsmedium"
-                android:drawableEnd="@drawable/ic_contact"/>
+                android:drawableEnd="@drawable/ic_contact"
+                android:importantForAutofill="no"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar
@@ -176,11 +192,15 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="225dp"
-            android:layout_height="114dp"
-            app:srcCompat="@drawable/logo"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="-15dp" />
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginEnd="94dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

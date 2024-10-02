@@ -10,35 +10,52 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
         android:text="@string/login"
         android:textColor="@color/colorAccent"
-        android:textSize="35dp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </TextView>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426"
+        app:layout_constraintVertical_bias="0.419"
         tools:layout_editor_absoluteX="0dp">
+
+        <!-- EMAIL -->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="132dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
             android:hint="@string/email"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorAccent"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -47,21 +64,26 @@
                 android:id="@+id/emailL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_email"
                 android:fontFamily="@font/poppinsmedium"
-                android:drawableEnd="@drawable/ic_email">
+                android:importantForAutofill="no"
+                android:autofillHints=""  >
 
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- PASSWORD -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="18dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
             android:hint="@string/password"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
@@ -71,7 +93,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_pass"
-                android:fontFamily="@font/poppinsmedium">
+                android:fontFamily="@font/poppinsmedium"
+                android:importantForAutofill="no">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -88,14 +111,17 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:backgroundTint="@color/colorAccent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
             android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/colorAccent"
+            android:elevation="4dp"
             android:text="@string/login"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColorHint="@color/colorAccent"
             android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progress" />
 
@@ -113,14 +139,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="173dp"
-        android:layout_height="372dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="-119dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

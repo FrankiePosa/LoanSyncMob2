@@ -70,19 +70,24 @@ public class Login extends AppCompatActivity {
                             field[1] = "password";
                             //Creating array for data -- get data from Edittext in SignUp
                             String[] data = new String[2];
-                            data[0] = "email";
-                            data[1] = "password";
+                            data[0] = email;
+                            data[1] = password;
 
                             PutData putData = new PutData("http://192.168.254.111/LoginRegister/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     //End ProgressBar (Set visibility to GONE)
                                     progressBar.setVisibility(View.GONE);
-
                                     String result = putData.getResult();
-                                    if(result.equals("Login Success")){
+
+                                    String[] responseParts = result.split(",");
+                                    if(responseParts[0].equals("Login Success")){
+                                        String firstName = responseParts[1];
+
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+
                                         Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                                        intent.putExtra("firstName", firstName);
                                         startActivity(intent);
                                         finish();
                                     }
