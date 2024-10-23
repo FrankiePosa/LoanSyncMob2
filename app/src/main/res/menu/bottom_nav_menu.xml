@@ -15,10 +15,6 @@
         android:icon="@drawable/ic_pay"
         android:id="@+id/navpayment"/>
     <item
-        android:title="Insights"
-        android:icon="@drawable/ic_analytics"
-        android:id="@+id/navanalytics"/>
-    <item
         android:title="Profile"
         android:icon="@drawable/ic_user"
         android:id="@+id/navprofile"/>
